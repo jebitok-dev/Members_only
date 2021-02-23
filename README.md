@@ -69,6 +69,7 @@ To get a local copy up and running follow these simple example steps.
 - git pull upstream develop
 - git commit -m "commit message"
 - git push -u origin HEAD
+````
 
 ## Show your support
 
@@ -81,4 +82,3 @@ Finally, if you've read this far, don't forget to give this repo a ⭐️. They'
 - [Microverse](https://microverse.org).
 
 <!-- ## 📝 License -->
-````
