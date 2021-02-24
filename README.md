@@ -33,7 +33,7 @@ To get this project up and running locally, you must already have ruby and rails
 - $ rails db:migrate
 ```
 
-### Run tests
+### Run
 
 - `$ rails s `
 - http://localhost:3000/users/sign_up: user can sign_up by entering their email, password, confirm password and submit the sign_up form or login using email and password.
