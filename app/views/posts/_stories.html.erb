@@ -23,7 +23,9 @@
             </div>
             <div class="media-content">
                 <div class="content">
+                    <% if user_signed_in? %>
                     <strong><%= post.user.email %></strong><br />
+                    <% end %>
                     <p><%= post.post %></p>
                 </div>
                 <% if user_signed_in? %>     
