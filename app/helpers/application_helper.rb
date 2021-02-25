@@ -1,4 +1,4 @@
-module ApplicationHelper  
+module ApplicationHelper
   def show_sign_up_or_in
     out = ''
     if user_signed_in?
@@ -11,17 +11,14 @@ module ApplicationHelper
   end
 
   def show_author(post)
-      out = ''
-      out << "<strong> #{post.user.email} </strong><br />" if user_signed_in?
-      out.html_safe
+    out = ''
+    out << "<strong> #{post.user.email} </strong><br />" if user_signed_in?
+    out.html_safe
   end
 
   def create_post
-      out = ''
-      if user_signed_in?
-          out << render('posts/form')
-      end
-      out.html_safe
-    end
+    out = ''
+    out << render('posts/form') if user_signed_in?
+    out.html_safe
+  end
 end
-
