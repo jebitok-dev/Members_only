@@ -1,2 +1,30 @@
 module ApplicationHelper
+    # def sign_in(user)
+    #     remember_token = User.new_remember_token
+    #     cookies.permanent[:remember_token] = remember_token
+    #     user.update_attribute(:remember_token, User.encrypt(remember_token))
+    #     self.current_user = user
+    #   end
+      
+    #   def user_signed_in?
+      
+    #   p "TRYING TO SIGN IN"
+    #   p !current_user.nil?
+    #   p current_user
+    #   p self.current_user
+    #   p @current_user
+    #   p self.current_user
+      
+    #   !current_user.nil?
+      
+    #   end
+      
+    #   def current_user=(user)
+    #     @current_user = user
+    #   end
+
+    #   def current_user?(user)
+    #     user == current_user
+    #   end  
+      
 end

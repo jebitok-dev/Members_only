@@ -2,7 +2,7 @@
 
 # Exclusive-Clubhouse(Members-Only)
 
-![screenshot](./app/assets/images/clubhse1.png)
+<!-- ![screenshot](./app/assets/images/clubhse1.png) -->
 
 This project puts your knowledge of authentication, sessions and cookies as well as forms, models, controllers, and validations to the tests. The aim of the project is to build a Exclusive Clubhouse that allows users to see the identity of authors of posts but outsiders just view stories but authors remain anonymous, using devise and Rails methods/helpers.
 
@@ -27,7 +27,7 @@ To get this project up and running locally, you must already have ruby and rails
 ```
 - $ git clone `$ git clone https://github.com/jebitok-dev/Members_only`
 - $ git checkout develop
-- Run `cd Twitter-clone`
+- Run `cd Members_only`
 - $ bundle install
 - $ rails db:create
 - $ rails db:migrate
@@ -39,7 +39,7 @@ To get this project up and running locally, you must already have ruby and rails
 - http://localhost:3000/users/sign_up: user can sign_up by entering their email, password, confirm password and submit the sign_up form or login using email and password.
 - User can create post(s)
 - User not signed in can see posts without seeing the email(username) of the author.
-- ![screenshot](./app/assets/images/TwitterClone1.png)
+<!-- - ![screenshot](./app/assets/images/TwitterClone1.png) -->
 
 ## Author
 
