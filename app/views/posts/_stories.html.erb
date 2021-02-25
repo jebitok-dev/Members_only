@@ -1,0 +1,21 @@
+<div class="column is-center">
+    <% if user_signed_in? %>
+    <article class="media box">
+        <%= create_post %>
+    </article>
+<% end %>
+
+
+<% @posts.each do | post | %>
+    <div class="box">
+        <article>
+            <div class="media-content">
+                <div class="content">
+                    <%= show_author(post) %>
+                    <p><%= post.post %></p>
+                </div>
+            </div>
+        </article>
+    </div>
+<% end %>
+</div>
