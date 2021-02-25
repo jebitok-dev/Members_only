@@ -40,21 +40,7 @@
             <p class="control">
               <%= link_to 'New Post', new_post_path, class: "button is-link is-inverted" %>
             </p>
-            <% if user_signed_in? %>
-              <p class="control">
-                <%= link_to current_user.email, edit_user_registration_path, class: "button is-link is-inverted"%>
-              </p>
-              <p>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-link is-inverted" %>
-              </p>
-              <% else %>
-            <p class="control">
-              <%= link_to 'Sign In', new_user_session_path, class: "button is-link is-inverted" %>
-            </p>
-            <p class="control">
-              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-link is-inverted" %>
-            </p>
-          <% end %>
+              <%= show_sign_up_or_in %>
           </div>
         </div>
       </div>

@@ -1,35 +1,17 @@
 <div class="column is-center">
     <% if user_signed_in? %>
     <article class="media box">
-        <% if user_signed_in? %>
-        <figure class="media-left">
-            <p class="image is-64x64">
-                <%= gravatar_image_tag(current_user.email, size: 64) %>
-            </p>
-        </figure>
-        <% end %>
-        <div class="media-content">
-            <%= render 'posts/form' %>
-        </div>
+        <%= create_post %>
     </article>
-    <% end %>
+<% end %>
 
 
 <% @posts.each do | post | %>
     <div class="box">
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-64x64">
-                    <% if user_signed_in? %>
-                    <%= gravatar_image_tag(post.user.email, size: 64) %>
-                    <% end %>
-                </figure>
-            </div>
+        <article>
             <div class="media-content">
                 <div class="content">
-                    <% if user_signed_in? %>
-                    <strong><%= post.user.email %></strong><br />
-                    <% end %>
+                    <%= show_author(post) %>
                     <p><%= post.post %></p>
                 </div>
             </div>

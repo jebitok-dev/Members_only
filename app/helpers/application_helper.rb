@@ -1,29 +1,27 @@
-module ApplicationHelper
-  # def sign_in(user)
-  #     remember_token = User.new_remember_token
-  #     cookies.permanent[:remember_token] = remember_token
-  #     user.update_attribute(:remember_token, User.encrypt(remember_token))
-  #     self.current_user = user
-  #   end
+module ApplicationHelper  
+  def show_sign_up_or_in
+    out = ''
+    if user_signed_in?
+      out << link_to('Log out', destroy_user_session_path, method: :delete, class: 'button is-link is-inverted')
+    else
+      out << link_to('Sign in', new_user_session_path, class: 'button is-link is-inverted')
+      out << link_to('Sign up', new_user_registration_path, class: 'button is-link is-inverted')
+    end
+    out.html_safe
+  end
 
-  #   def user_signed_in?
+  def show_author(post)
+      out = ''
+      out << "<strong> #{post.user.email} </strong><br />" if user_signed_in?
+      out.html_safe
+  end
 
-  #   p "TRYING TO SIGN IN"
-  #   p !current_user.nil?
-  #   p current_user
-  #   p self.current_user
-  #   p @current_user
-  #   p self.current_user
-
-  #   !current_user.nil?
-
-  #   end
-
-  #   def current_user=(user)
-  #     @current_user = user
-  #   end
-
-  #   def current_user?(user)
-  #     user == current_user
-  #   end
+  def create_post
+      out = ''
+      if user_signed_in?
+          out << render('posts/form')
+      end
+      out.html_safe
+    end
 end
+
